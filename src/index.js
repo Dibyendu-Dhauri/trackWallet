@@ -10,14 +10,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    
     <GlobalStyle />
     <GlobalProvider>
       <Routes>
         <Route path='/dashboard' element={<App />}/>
         <Route path='/' element={<Auth/>} />
       </Routes>
-      
     </GlobalProvider>
     </BrowserRouter>
   </React.StrictMode>
