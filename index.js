@@ -1,10 +1,11 @@
 const express = require('express')
 const cors = require('cors');
+const dotenv = require("dotenv");
 const { db } = require('./db/db');
 const {readdirSync} = require('fs')
 const app = express()
 
-require('dotenv').config()
+dotenv.config();
 
 const PORT = process.env.PORT
 
