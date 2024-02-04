@@ -14,7 +14,7 @@ export default function Auth() {
   });
   const navigate = useNavigate();
 
-  const BASE_URL = "http://localhost:8001/api/v1/";
+  const BASE_URL = "https://trackwallet.onrender.com/api/v1/";
   const handleChange = () => {
     setIsLoginDisplay((prev) => !prev);
     setUserCredentials({
