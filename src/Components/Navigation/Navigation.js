@@ -8,6 +8,7 @@ import {useNavigate} from 'react-router-dom'
 function Navigation({active, setActive}) {
     const [userName, setUserName] = useState(localStorage.getItem("userName") || null);
     const navigate = useNavigate();
+    console.log(typeof userName)
 
     const handleSignout = ()=>{
         
@@ -15,7 +16,7 @@ function Navigation({active, setActive}) {
             navigate("/auth")
         } else {
             localStorage.setItem("userName",null);
-            setUserName("null")
+            setUserName(null)
         }
     }
     
@@ -24,7 +25,7 @@ function Navigation({active, setActive}) {
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
-                    <h2>{userName === null ? " " : userName}</h2>
+                    <h2>{userName === "null" ? " " : userName}</h2>
                     <p>Your Money</p>
                 </div>
             </div>
@@ -42,7 +43,7 @@ function Navigation({active, setActive}) {
             </ul>
             <div className="bottom-nav">
                 <li onClick={handleSignout}>
-                    {signout}  {userName === null ? "Sign In" : "Sign Out"}
+                    {signout}  {userName === "null" ? "Sign In" : "Sign Out"}
                 </li>
             </div>
         </NavStyled>
