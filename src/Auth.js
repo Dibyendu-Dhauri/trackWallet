@@ -51,7 +51,7 @@ export default function Auth() {
         });
         // Set timeout for navigation
         setTimeout(() => {
-          navigate("/dashboard");
+          navigate("/");
         }, 1000);
       } else {
         // Check validation for all fields
@@ -75,7 +75,7 @@ export default function Auth() {
         });
         // Set timeout for navigation
         setTimeout(() => {
-          navigate("/dashboard");
+          navigate("/");
         }, 1000);
       }
     } catch (error) {

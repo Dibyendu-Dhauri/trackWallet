@@ -13,8 +13,8 @@ root.render(
     <GlobalStyle />
     <GlobalProvider>
       <Routes>
-        <Route path='/dashboard' element={<App />}/>
-        <Route path='/' element={<Auth/>} />
+        <Route path='/' element={<App />}/>
+        <Route path='/auth' element={<Auth/>} />
       </Routes>
     </GlobalProvider>
     </BrowserRouter>
